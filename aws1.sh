@@ -72,43 +72,8 @@ xrayr restart
 clear
 # add vps lên vps.dualeovpn.net
 
-while true; do
-    echo "Bạn muốn gắn VPS lên AZ 1 ---> AZ 6, vui lòng chọn số từ 1 đến 6 "
-    echo -n "Nhập số: "
-    # Đọc lựa chọn từ người dùng
-    read choice
+curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 NCc7zaSgdnQDJi8EbD
 
-    # Kiểm tra lựa chọn và thực hiện hành động tương ứng
-    case $choice in
-      1)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 NCc7zaSgdnQDJi8EbD
-        break
-        ;;
-      2)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 4nh1Vzagp3RIaQrO5H
-        break
-        ;;
-      3)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 TtVVb7jKQN7OqebCv6
-        break
-        ;;
-      4)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 YPBuznRdpkWmXZnCjO
-        break
-        ;;
-      5)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 RQYJRiQAVWenqr7EgV
-        break
-        ;;
-      6)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 YTJbls2tx28MspaPuq
-        break
-        ;;
-      *)
-        echo "Lựa chọn không hợp lệ. Vui lòng chọn số từ 1 đến 6."
-        ;;
-    esac
-done
 # Thực hiện cập nhật DDNS ngay lập tức
 cloudflare-ddns --update-now
 # gost setup tiktok
