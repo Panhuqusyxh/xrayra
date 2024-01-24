@@ -17,7 +17,7 @@ Nodes:
     ApiConfig:
       ApiHost: "https://dualeovpn.net"
       ApiKey: "dualeovpndualeovpn"
-      NodeID: 437
+      NodeID: 300
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
@@ -71,7 +71,7 @@ Nodes:
     ApiConfig:
       ApiHost: "https://dualeovpn.net"
       ApiKey: "dualeovpndualeovpn"
-      NodeID: 438
+      NodeID: 301
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
