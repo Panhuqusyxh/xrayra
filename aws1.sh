@@ -51,12 +51,8 @@ cloudflare-ddns --configure << EOF
 K
 dcmnmmmchkh@gmail.com
 3b411374ee6b120fbfc87be4b80e930922034
-svn.dualeovpn.net,aws1.dualeovpn.net,aws2.dualeovpn.net,aws3.dualeovpn.net,aws4.dualeovpn.net,aws5.dualeovpn.net,aws6.dualeovpn.net
+svn.dualeovpn.net,aws1.dualeovpn.net
 EOF
-
-
-
-
 
 # Cài xrayr 
 bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/xrayr1.sh)
@@ -85,11 +81,11 @@ while true; do
     # Kiểm tra lựa chọn và thực hiện hành động tương ứng
     case $choice in
       1)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 YAu6icQHhwxzh95qYS
+        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 NCc7zaSgdnQDJi8EbD
         break
         ;;
       2)
-        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 9vLuEjo9UA3iqtWhS6
+        curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 4nh1Vzagp3RIaQrO5H
         break
         ;;
       3)
