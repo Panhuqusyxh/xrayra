@@ -72,7 +72,7 @@ xrayr restart
 clear
 # add vps lên vps.dualeovpn.net
 
-curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 4nh1Vzagp3RIaQrO5H
+bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/add-Nezha.sh)
 
 # Thực hiện cập nhật DDNS ngay lập tức
 cloudflare-ddns --update-now
