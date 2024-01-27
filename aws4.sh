@@ -65,7 +65,7 @@ config_file="/etc/XrayR/config.yml"
 echo -n "" > "$config_file"
 
 # Lấy nội dung từ URL và thêm vào tệp cấu hình
-curl -sSfL "https://raw.githubusercontent.com/Panhuqusyxh/xrayra/master/xrayr-awsC.txt" >> "$config_file"
+curl -sSfL "https://raw.githubusercontent.com/Panhuqusyxh/xrayra/master/xrayr-awsD.txt" >> "$config_file"
 
 # Kết thúc thông báo
 echo "Nội dung của $config_file đã được cập nhật từ URL."
