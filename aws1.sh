@@ -29,7 +29,7 @@ rm -rf ~/.cloudflare-ddns
 rm -f ~/.cloudflare-ddns-config
 
 # Clone repository và kiểm tra lỗi
-git clone https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client || {
+Wget https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client || {
     echo "Lỗi khi clone repository. Kiểm tra kết nối mạng của bạn."
     exit 1
 }
