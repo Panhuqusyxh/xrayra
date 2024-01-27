@@ -29,10 +29,8 @@ rm -rf ~/.cloudflare-ddns
 rm -f ~/.cloudflare-ddns-config
 
 # Clone repository và kiểm tra lỗi
-Wget https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client || {
-    echo "Lỗi khi clone repository. Kiểm tra kết nối mạng của bạn."
-    exit 1
-}
+wget https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client 
+
 
 # Cập nhật gói và cài đặt phụ thuộc
 apt update -y && apt install -y python-is-python3 python3-pip expect || {
