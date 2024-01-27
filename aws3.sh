@@ -30,7 +30,7 @@ rm -f ~/.cloudflare-ddns-config
 
 
 # Clone repository và kiểm tra lỗi
-wget https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client 
+git clone https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client 
 
 
 # Cập nhật gói và cài đặt phụ thuộc
