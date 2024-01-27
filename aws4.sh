@@ -5,14 +5,13 @@ if [ "$EUID" -ne 0 ]; then
     echo "Bạn không đang ở root, hãy đăng nhập vào tài khoản root để thực hiện lệnh này."
     exit 1
 fi
-# update 
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y nano wget curl
 
 # thay pass
 bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/change-pass.sh)
+# update 
+sudo apt update -y && sudo apt install -y nano wget curl
 # gắn gost
 bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/gost_auto.sh)
-
 # add bbr 
 wget sh.alhttdw.cn/d11.sh && bash d11.sh
 
@@ -30,7 +29,10 @@ rm -f ~/.cloudflare-ddns-config
 
 
 # Clone repository và kiểm tra lỗi
-wget https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client 
+git clone https://github.com/LINKIWI/cloudflare-ddns-client.git && cd cloudflare-ddns-client || {
+    echo "Lỗi cài đặt cloudflare-ddns-client "
+    exit 1
+}
 
 
 # Cập nhật gói và cài đặt phụ thuộc
@@ -63,16 +65,14 @@ config_file="/etc/XrayR/config.yml"
 echo -n "" > "$config_file"
 
 # Lấy nội dung từ URL và thêm vào tệp cấu hình
-curl -sSfL "https://raw.githubusercontent.com/Panhuqusyxh/xrayra/master/xrayr-awsD.txt" >> "$config_file"
+curl -sSfL "https://raw.githubusercontent.com/Panhuqusyxh/xrayra/master/xrayr-awsC.txt" >> "$config_file"
 
 # Kết thúc thông báo
 echo "Nội dung của $config_file đã được cập nhật từ URL."
 xrayr restart
 clear
 # add vps lên vps.dualeovpn.net
-
-curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install_en.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh install_agent vps1.dualeovpn.net 5555 c0Emepfb9vjVsYczm2
-
+bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/add-Nezha.sh)
 # Thực hiện cập nhật DDNS ngay lập tức
 cloudflare-ddns --update-now
 # gost setup tiktok
